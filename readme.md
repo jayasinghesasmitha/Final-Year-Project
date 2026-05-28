@@ -83,3 +83,23 @@ cd generators/gemmini/software/gemmini-rocc-tests
 cd ~/chipyard/sims/verilator
 make CONFIG=GemminiRocketConfig
 ```
+
+## After Reopen follow below steps
+```bash
+cd chipyard
+source env.sh
+```
+
+## Run simulation test
+```bash
+cd ~/chipyard/sims/verilator
+./simulator-chipyard.harness-GemminiRocketConfig ../../generators/gemmini/software/gemmini-rocc-tests/build/bareMetalC/template-baremetal
+```
+
+## If have an error
+```bash
+cd ~/chipyard/generators/gemmini
+make -C software/libgemmini clean
+make -C software/libgemmini install
+make: Entering directory '/your-directory/chipyard/generators/gemmini/software/libgemmini'
+```
