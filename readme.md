@@ -103,3 +103,26 @@ make -C software/libgemmini clean
 make -C software/libgemmini install
 make: Entering directory '/your-directory/chipyard/generators/gemmini/software/libgemmini'
 ```
+## Steps You Followed to Get GUI
+
+### 1. Built the debug simulator with Gemmini support
+```bash
+cd ~/chipyard/sims/verilator
+make clean
+make debug CONFIG=GemminiRocketConfig
+```
+
+### 2. Ran the simulation with waveform generation using make command
+```bash
+make run-binary-debug CONFIG=GemminiRocketConfig BINARY=../../generators/gemmini/software/gemmini-rocc-tests/build/bareMetalC/template-baremetal
+```
+
+### 3. Verified the VCD file was created (1932 MB file)
+```bash
+ls -la output/chipyard.harness.TestHarness.GemminiRocketConfig/*.vcd
+```
+
+### 4. Opened GTKWave to view the waveform
+```bash
+gtkwave output/chipyard.harness.TestHarness.GemminiRocketConfig/template-baremetal.vcd
+```
