@@ -1,0 +1,3 @@
+/home/sasmitha-jayasinghe/Documents/github/CFU-Playground/proj/mnv2_first/build/renode/CMakeFiles/libVtop.dir
+/home/sasmitha-jayasinghe/Documents/github/CFU-Playground/proj/mnv2_first/build/renode/CMakeFiles/edit_cache.dir
+/home/sasmitha-jayasinghe/Documents/github/CFU-Playground/proj/mnv2_first/build/renode/CMakeFiles/rebuild_cache.dir
