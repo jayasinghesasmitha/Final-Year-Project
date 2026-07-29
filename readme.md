@@ -89,6 +89,16 @@ endef
 
 Save and exit (Ctrl+O, Enter, Ctrl+X).
 
+Go to scripts/generate_renode_scripts.py
+
+```makefile
+cpu:
+    cpuType: "rv32im_zicsr"
+    init:
+        RegisterCustomCSR "BPM" 0xB04  User
+        RegisterCustomCSR "BPM" 0xB05  User
+```
+
 ---
 
 ## Running the Simulation
