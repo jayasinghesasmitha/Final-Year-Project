@@ -1,85 +1,175 @@
-# Gemmini NPU Simulation Setup Guide
+# CFU Playground Setup and Run Guide
 
-A complete guide to installing Chipyard with Gemmini DNN accelerator and running your first NPU simulations on Ubuntu.
+This guide documents the exact steps I followed to successfully set up and run the CFU Playground with Renode simulation on Ubuntu.
 
-## System Requirements
+## Prerequisites
 
-- **OS**: Ubuntu 20.04 or 22.04 (64-bit)
-- **RAM**: 16GB minimum (8GB with settings adjustment)
-- **Storage**: 50-100GB free space
-- **CPU**: Multiple cores recommended
+- Ubuntu 22.04 or 24.04
+- Internet connection
+- Git, Make, Python3, and Conda installed
 
-## Quick Start
+---
 
-### 1. Install System Dependencies
+## Setup Steps
+
+### Step 1: Clone the Repository
 
 ```bash
-# Basic build tools and libraries
-sudo apt-get update
-sudo apt-get install -y build-essential git curl
-sudo apt-get install -y libgmp-dev libmpfr-dev libmpc-dev zlib1g-dev
-sudo apt-get install -y default-jdk
-sudo apt-get install -y cmake ninja-build
-sudo apt-get install -y python3-pip
-
-# Additional dependencies
-sudo apt-get install -y bison flex software-properties-common
-sudo apt-get install -y texinfo gengetopt
-sudo apt-get install -y libexpat1-dev libusb-dev libncurses5-dev
-sudo apt-get install -y rsync libguestfs-tools expat ctags
-sudo apt-get install -y device-tree-compiler
+cd ~/Documents
+mkdir -p github
+cd github
+git clone https://github.com/google/CFU-Playground.git
+cd CFU-Playground
 ```
 
-### 2. Install sbt (Scala Build Tool)
+### Step 2: Run the Setup Script
 
 ```bash
-echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
-sudo apt-get update
-sudo apt-get install -y sbt
+./scripts/setup
 ```
 
-### 3. Install Miniforge (Conda Alternative)
+This updates submodules, downloads Renode, and installs missing Linux packages.
+
+### Step 3: Create the Conda Environment
 
 ```bash
-curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-bash Miniforge3-$(uname)-$(uname -m).sh
-# When prompted: type "yes" to initialize
-source ~/.bashrc
-
-# Optional: Install faster libmamba solver
-conda install -n base conda-libmamba-solver -y
-conda config --set solver libmamba
+make env
 ```
 
-### 4. Clone and Setup Chipyard
+This creates the `cfu-common` Conda environment with all required tools (RISC-V toolchain, Verilator, Yosys, NextPNR, etc.).
+
+### Step 4: Activate the Conda Environment
 
 ```bash
-git clone https://github.com/ucb-bar/chipyard.git
-cd chipyard
+source ~/Documents/github/CFU-Playground/env/conda/bin/activate cfu-common
 ```
 
-### 5. Run Main Build Script
+After activation, the prompt changes from `(base)` to `(cfu-common)`.
+
+### Step 5: Download and Install the RISC-V Toolchain
+
+The system toolchain (`/usr/bin/riscv64-unknown-elf-gcc`) does not support the `zicsr` extension required by the build system.
 
 ```bash
-# This takes 2-4 hours
-./build-setup.sh
+cd ~/Documents/github/CFU-Playground
+
+# Download the toolchain
+wget https://github.com/riscv-collab/riscv-gnu-toolchain/releases/download/2023.06.02/riscv64-elf-ubuntu-20.04-nightly-2023.06.02-nightly.tar.gz
+
+# Extract it (creates directory called 'riscv')
+tar -xzf riscv64-elf-ubuntu-20.04-nightly-2023.06.02-nightly.tar.gz
+
+# Move to a standard location
+mv riscv ~/riscv-toolchain
+
+# Add to PATH
+export PATH=$HOME/riscv-toolchain/bin:$PATH
 ```
-Note: If you encounter space issues, skip FireMarshal:
+
+### Step 6: Modify Build System for `zicsr` Support
+
+The build system needs to pass the `zicsr` flag to the assembler. Edit the `common.mak` file:
 
 ```bash
-./build-setup.sh -s 1 -s 9 -s 10
+cd ~/Documents/github/CFU-Playground
+nano third_party/python/litex/litex/soc/software/common.mak
 ```
 
-### 6. Build Gemmini Software Tests
-```bash
-source env.sh
-cd generators/gemmini/software/gemmini-rocc-tests
-./build.sh
+Find the `compile` and `assemble` rules and modify them to:
+
+```makefile
+define compile
+$(CC) -c $(CFLAGS) -march=rv32i2p0_m_zicsr $(1) $< -o $@
+endef
+
+define assemble
+$(CC) -c $(CFLAGS) -march=rv32i2p0_m_zicsr -o $@ $<
+endef
 ```
 
-### 7. Build Verilator Simulator
+Save and exit (Ctrl+O, Enter, Ctrl+X).
+
+Go to scripts/generate_renode_scripts.py
+
+```makefile
+cpu:
+    cpuType: "rv32im_zicsr"
+    init:
+        RegisterCustomCSR "BPM" 0xB04  User
+        RegisterCustomCSR "BPM" 0xB05  User
+```
+
+---
+
+## Running the Simulation
+
+### Step 1: Navigate to the MobileNetV2 Project
+
 ```bash
-cd ~/chipyard/sims/verilator
-make CONFIG=GemminiRocketConfig
+cd ~/Documents/github/CFU-Playground/proj/mnv2_first
+```
+
+### Step 2: Build and Run
+
+```bash
+make clean
+make renode
+```
+
+### Step 3: Interact with the Menu
+
+Once Renode starts, you'll see the CFU Playground menu:
+
+```
+Hello, World!
+CFU Playground
+==============
+ 1: TfLM Models menu
+ 2: Functional CFU Tests
+ 3: Project menu
+ 4: Performance Counter Tests
+ 5: TFLite Unit Tests
+ 6: Benchmarks
+ 7: Util Tests
+ 8: Embench IoT
+main>
+```
+
+#### Run MobileNetV2 Inference:
+
+```
+main> 1                          # Enter TfLM Models menu
+models> 2                        # Select MobileNetV2
+mnv2> 0                          # Run test 0
+```
+
+#### Verify Correctness with Golden Test:
+
+```
+mnv2> g                          # Run golden test
+```
+
+#### Exit the Menu:
+
+```
+mnv2> x                          # Exit MobileNetV2 menu
+models> x                        # Exit TfLM Models menu
+```
+
+### Step 4: Stop Renode
+
+Press `Ctrl+C` in the Renode terminal, or type `quit` in the Renode Monitor window.
+
+---
+
+## Quick Restart Commands
+
+To restart the simulation after stopping:
+
+```bash
+cd ~/Documents/github/CFU-Playground
+source env/conda/bin/activate cfu-common
+export PATH=$HOME/riscv-toolchain/bin:$PATH
+cd proj/mnv2_first
+make renode
 ```
