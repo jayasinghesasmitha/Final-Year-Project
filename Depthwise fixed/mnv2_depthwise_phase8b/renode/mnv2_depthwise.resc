@@ -1,0 +1,5 @@
+# Phase 8B Renode integration scaffold.
+# A .resc script alone does not turn the Verilog CFU into a Renode
+# peripheral. The Renode-side CPU/custom-instruction model is the
+# next integration step.
+echo "mnv2_depthwise Phase 8B"

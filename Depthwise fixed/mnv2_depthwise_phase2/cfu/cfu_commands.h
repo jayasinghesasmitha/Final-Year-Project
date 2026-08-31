@@ -1,0 +1,13 @@
+#ifndef MNV2_DEPTHWISE_CFU_COMMANDS_H_
+#define MNV2_DEPTHWISE_CFU_COMMANDS_H_
+
+#define MNV2_CMD_CONFIG       0x0
+#define MNV2_CMD_LOAD_IFMAP   0x1
+#define MNV2_CMD_LOAD_EXP_W   0x2
+#define MNV2_CMD_LOAD_DW_W    0x3
+#define MNV2_CMD_LOAD_PROJ_W  0x4
+#define MNV2_CMD_START        0x5
+#define MNV2_CMD_STATUS       0x6
+#define MNV2_CMD_READ_OUTPUT  0x7
+
+#endif

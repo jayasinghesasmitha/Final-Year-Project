@@ -1,0 +1,41 @@
+===== Phase 9E native functional test =====
+
+===== Reset =====
+
+===== Loading test data =====
+[TB] Loading IFMAP...
+[TB] Loading expansion weights...
+[TB] Loading depthwise weights...
+[TB] Loading projection weights...
+[TB] Test data loaded.
+
+===== Starting accelerator =====
+[TB] START returned 00000000
+
+===== Running accelerator =====
+[TB] cycle=0 status=00000001 busy=1 done=0
+[TB] cycle=1000 status=00000001 busy=1 done=0
+[TB] cycle=2000 status=00000002 busy=0 done=1
+[TB] DONE after approximately 2000 cycles
+
+===== Reading and verifying all outputs =====
+[TB] spatial=0 expected=768
+[TB] spatial=1 expected=1152
+[TB] spatial=2 expected=1152
+[TB] spatial=3 expected=768
+[TB] spatial=4 expected=1152
+[TB] spatial=5 expected=1728
+[TB] spatial=6 expected=1728
+[TB] spatial=7 expected=1152
+[TB] spatial=8 expected=1152
+[TB] spatial=9 expected=1728
+[TB] spatial=10 expected=1728
+[TB] spatial=11 expected=1152
+[TB] spatial=12 expected=768
+[TB] spatial=13 expected=1152
+[TB] spatial=14 expected=1152
+[TB] spatial=15 expected=768
+
+[TB] PASS: all 256 outputs match the software golden model
+
+===== Phase 9E test complete =====

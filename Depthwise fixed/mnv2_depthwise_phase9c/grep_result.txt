@@ -1,0 +1,137 @@
+rtl/mnv2_depthwise_top.v:59:    input wire [7:0] out_rd_addr,
+rtl/mnv2_depthwise_top.v:60:    output reg signed [ACC_W-1:0] out_rd_data
+rtl/mnv2_depthwise_top.v:171:    //     out_rd_addr
+rtl/mnv2_depthwise_top.v:175:    //     out_rd_data
+rtl/mnv2_depthwise_top.v:181:        if (out_rd_addr < OUT_N)
+rtl/mnv2_depthwise_top.v:182:            out_rd_data = output_mem[out_rd_addr];
+rtl/mnv2_depthwise_top.v:184:            out_rd_data = 0;
+rtl/mnv2_depthwise_cfu.v:14:    input wire [2:0] cmd_payload_function_id,
+rtl/mnv2_depthwise_cfu.v:42:    reg [7:0] out_rd_addr;
+rtl/mnv2_depthwise_cfu.v:43:    wire signed [31:0] out_rd_data;
+rtl/mnv2_depthwise_cfu.v:64:        .out_rd_addr(out_rd_addr),
+rtl/mnv2_depthwise_cfu.v:65:        .out_rd_data(out_rd_data)
+rtl/mnv2_depthwise_cfu.v:91:            out_rd_addr <= 0;
+rtl/mnv2_depthwise_cfu.v:104:                rsp_payload_outputs_0 <= out_rd_data;
+rtl/mnv2_depthwise_cfu.v:110:                case (cmd_payload_function_id)
+rtl/mnv2_depthwise_cfu.v:150:                        out_rd_addr <= cmd_payload_inputs_0[7:0];
+verilator/tb_phase9d.cpp:30:static uint32_t execute(uint32_t function_id,
+verilator/tb_phase9d.cpp:31:                        uint32_t data0,
+verilator/tb_phase9d.cpp:32:                        uint32_t data1)
+verilator/tb_phase9d.cpp:34:    dut->cmd_payload_function_id = function_id;
+verilator/tb_phase9d.cpp:35:    dut->cmd_payload_inputs_0 = data0;
+verilator/tb_phase9d.cpp:36:    dut->cmd_payload_inputs_1 = data1;
+verilator/tb_phase9d.cpp:56:        printf("[TB] ERROR: cmd_ready timeout fn=%u\n",
+verilator/tb_phase9d.cpp:57:               function_id);
+verilator/tb_phase9d.cpp:77:            printf("[TB] fn=%u data0=%08x data1=%08x -> %08x (%d cycles)\n",
+verilator/tb_phase9d.cpp:78:                   function_id,
+verilator/tb_phase9d.cpp:79:                   data0,
+verilator/tb_phase9d.cpp:80:                   data1,
+verilator/tb_phase9d.cpp:101:    printf("[TB] ERROR: rsp_valid timeout fn=%u\n",
+verilator/tb_phase9d.cpp:102:           function_id);
+verilator/tb_phase9d.cpp:210:    dut->cmd_payload_function_id = 0;
+verilator/tb_phase9c.cpp:23:static uint32_t execute(uint32_t function_id,
+verilator/tb_phase9c.cpp:24:                        uint32_t data0,
+verilator/tb_phase9c.cpp:25:                        uint32_t data1)
+verilator/tb_phase9c.cpp:27:    dut->cmd_payload_function_id = function_id;
+verilator/tb_phase9c.cpp:28:    dut->cmd_payload_inputs_0 = data0;
+verilator/tb_phase9c.cpp:29:    dut->cmd_payload_inputs_1 = data1;
+verilator/tb_phase9c.cpp:36:    printf("[TB] execute fn=%u data0=%08x data1=%08x\n",
+verilator/tb_phase9c.cpp:37:           function_id, data0, data1);
+verilator/tb_phase9c.cpp:90:    dut->cmd_payload_function_id = 0;
+verilator/CMakeLists.txt:43:            -Wno-EOFNEWLINE
+verilator/sim_main.cpp:21:        req_func_id = &m->cmd_payload_function_id;
+verilator/sim_main.cpp:23:        req_data0 = &m->cmd_payload_inputs_0;
+verilator/sim_main.cpp:24:        req_data1 = &m->cmd_payload_inputs_1;
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0__Slow.cpp:158:    vlSelf->cmd_payload_function_id = VL_RAND_RESET_I(3);
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0__Slow.cpp:179:    vlSelf->mnv2_depthwise_cfu__DOT__out_rd_addr = VL_RAND_RESET_I(8);
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:171:        vlSelf->mnv2_depthwise_cfu__DOT__out_rd_addr = 0U;
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:235:                [vlSelf->mnv2_depthwise_cfu__DOT__out_rd_addr];
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:286:            if ((4U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:287:                if ((2U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:288:                    if ((1U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:294:                } else if ((1U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:303:            } else if ((2U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:304:                if ((1U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:311:            } else if ((1U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:570:            if ((4U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:571:                if ((2U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:572:                    if ((1U & (~ (IData)(vlSelf->cmd_payload_function_id)))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:573:                        vlSelf->mnv2_depthwise_cfu__DOT__out_rd_addr 
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:577:                if ((1U & (~ ((IData)(vlSelf->cmd_payload_function_id) 
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:579:                    if ((1U & (~ (IData)(vlSelf->cmd_payload_function_id)))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:586:            if ((1U & (~ ((IData)(vlSelf->cmd_payload_function_id) 
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:588:                if ((1U & (~ ((IData)(vlSelf->cmd_payload_function_id) 
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:590:                    if ((1U & (~ (IData)(vlSelf->cmd_payload_function_id)))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:597:                    if ((1U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:605:                if ((2U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:606:                    if ((1U & (~ (IData)(vlSelf->cmd_payload_function_id)))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:613:                    if ((1U & (IData)(vlSelf->cmd_payload_function_id))) {
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:813:    if (VL_UNLIKELY((vlSelf->cmd_payload_function_id 
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root__DepSet_h8f2d9299__0.cpp:815:        Verilated::overWidthError("cmd_payload_function_id");}
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root.h:5:#ifndef VERILATED_VMNV2_DEPTHWISE_CFU___024ROOT_H_
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root.h:23:        VL_IN8(cmd_payload_function_id,2,0);
+verilator/build/verilated/Vmnv2_depthwise_cfu___024root.h:40:        CData/*7:0*/ mnv2_depthwise_cfu__DOT__out_rd_addr;
+verilator/build/verilated/Vmnv2_depthwise_cfu.cpp:16:    , cmd_payload_function_id{vlSymsp->TOP.cmd_payload_function_id}
+verilator/build/verilated/Vmnv2_depthwise_cfu__pch.h:9:#ifndef VERILATED_VMNV2_DEPTHWISE_CFU__PCH_H_
+verilator/build/verilated/Vmnv2_depthwise_cfu__verFiles.dat:2:C "--cc --Mdir /home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/verilated -CFLAGS -fPIC --top-module mnv2_depthwise_cfu -Wall -Wno-fatal -Wno-WIDTHEXPAND -Wno-UNUSEDSIGNAL -Wno-BLKSEQ -Wno-EOFNEWLINE /home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/../rtl/mnv2_depthwise_cfu.v /home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/../rtl/mnv2_depthwise_top.v"
+verilator/build/verilated/Vmnv2_depthwise_cfu__Syms.h:7:#ifndef VERILATED_VMNV2_DEPTHWISE_CFU__SYMS_H_
+verilator/build/verilated/Vmnv2_depthwise_cfu.h:8:#ifndef VERILATED_VMNV2_DEPTHWISE_CFU_H_
+verilator/build/verilated/Vmnv2_depthwise_cfu.h:31:    VL_IN8(&cmd_payload_function_id,2,0);
+verilator/build/CMakeFiles/tb_phase9e.dir/tb_phase9e.cpp.o.d:98: /usr/include/x86_64-linux-gnu/bits/confname.h \
+verilator/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp:4:#ifndef __cplusplus
+verilator/build/CMakeFiles/tb_phase9d.dir/tb_phase9d.cpp.o.d:98: /usr/include/x86_64-linux-gnu/bits/confname.h \
+verilator/build/CMakeFiles/mnv2_depthwise_cfu.dir/sim_main.cpp.o.d:98: /usr/include/x86_64-linux-gnu/bits/confname.h \
+verilator/build/CMakeFiles/tb_phase9c.dir/tb_phase9c.cpp.o.d:98: /usr/include/x86_64-linux-gnu/bits/confname.h \
+verilator/build/CMakeFiles/verilate.dir/build.make:72:	/usr/bin/verilator --cc --Mdir /home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/verilated -CFLAGS -fPIC --top-module mnv2_depthwise_cfu -Wall -Wno-fatal -Wno-WIDTHEXPAND -Wno-UNUSEDSIGNAL -Wno-BLKSEQ -Wno-EOFNEWLINE /home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/../rtl/mnv2_depthwise_cfu.v /home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/../rtl/mnv2_depthwise_top.v
+verilator/tb_phase9e.cpp:30:static uint32_t execute(uint32_t function_id,
+verilator/tb_phase9e.cpp:31:                        uint32_t data0,
+verilator/tb_phase9e.cpp:32:                        uint32_t data1)
+verilator/tb_phase9e.cpp:34:    dut->cmd_payload_function_id = function_id;
+verilator/tb_phase9e.cpp:35:    dut->cmd_payload_inputs_0 = data0;
+verilator/tb_phase9e.cpp:36:    dut->cmd_payload_inputs_1 = data1;
+verilator/tb_phase9e.cpp:56:        printf("[TB] ERROR: cmd_ready timeout fn=%u\n",
+verilator/tb_phase9e.cpp:57:               function_id);
+verilator/tb_phase9e.cpp:77:            printf("[TB] fn=%u data0=%08x data1=%08x -> %08x (%d cycles)\n",
+verilator/tb_phase9e.cpp:78:                   function_id,
+verilator/tb_phase9e.cpp:79:                   data0,
+verilator/tb_phase9e.cpp:80:                   data1,
+verilator/tb_phase9e.cpp:101:    printf("[TB] ERROR: rsp_valid timeout fn=%u\n",
+verilator/tb_phase9e.cpp:102:           function_id);
+verilator/tb_phase9e.cpp:210:    dut->cmd_payload_function_id = 0;
+verilator/renode_api/renode_cfu.cpp:34:    uint32_t data0,
+verilator/renode_api/renode_cfu.cpp:35:    uint32_t data1,
+verilator/renode_api/renode_cfu.cpp:40:        "[RENODE] execute fn=%u data0=%08x data1=%08x\n",
+verilator/renode_api/renode_cfu.cpp:42:        data0,
+verilator/renode_api/renode_cfu.cpp:43:        data1
+verilator/renode_api/renode_cfu.cpp:54:            data0,
+verilator/renode_api/renode_cfu.cpp:55:            data1,
+verilator/renode_api/renode_cfu.cpp:165:    uint32_t data0,
+verilator/renode_api/renode_cfu.cpp:166:    uint32_t data1,
+verilator/renode_api/renode_cfu.cpp:171:        data0,
+verilator/renode_api/renode_cfu.cpp:172:        data1,
+verilator/renode_api/renode_cfu.h:7:#ifndef RENODE_CFU_H
+verilator/renode_api/renode_cfu.h:28:  uint64_t execute(uint32_t functionID, uint32_t data0, uint32_t data1, int* error);
+verilator/renode_api/renode_cfu.h:48:  virtual uint64_t execute(uint32_t functionID, uint32_t data0, uint32_t data1, int* error);
+verilator/renode_api/cfu.cpp.before_9d_fix:46:    uint32_t data0,
+verilator/renode_api/cfu.cpp.before_9d_fix:47:    uint32_t data1,
+verilator/renode_api/cfu.cpp.before_9d_fix:54:        "[CFU] execute fn=%u data0=%08x data1=%08x\n",
+verilator/renode_api/cfu.cpp.before_9d_fix:56:        data0,
+verilator/renode_api/cfu.cpp.before_9d_fix:57:        data1
+verilator/renode_api/cfu.cpp.before_9d_fix:70:    *req_data0 = data0;
+verilator/renode_api/cfu.cpp.before_9d_fix:71:    *req_data1 = data1;
+verilator/renode_api/renode_imports.h:1:#ifndef RENODE_IMPORTS_H_
+verilator/renode_api/cfu.cpp:46:    uint32_t data0,
+verilator/renode_api/cfu.cpp:47:    uint32_t data1,
+verilator/renode_api/cfu.cpp:54:        "[CFU] execute fn=%u data0=%08x data1=%08x\n",
+verilator/renode_api/cfu.cpp:56:        data0,
+verilator/renode_api/cfu.cpp:57:        data1
+verilator/renode_api/cfu.cpp:70:    *req_data0 = data0;
+verilator/renode_api/cfu.cpp:71:    *req_data1 = data1;
+verilator/renode_api/cfu.cpp.bak:38:uint64_t Cfu::execute(uint32_t functionID, uint32_t data0, uint32_t data1, int* error)
+verilator/renode_api/cfu.cpp.bak:42:  *req_data0 = data0;
+verilator/renode_api/cfu.cpp.bak:43:  *req_data1 = data1;
+verilator/renode_api/cfu.h:1:#ifndef CFU_H
+verilator/renode_api/cfu.h:14:        uint32_t data0,
+verilator/renode_api/cfu.h:15:        uint32_t data1,
+verilator/renode_api/cfu.h:33:    uint32_t *req_data0;
+verilator/renode_api/cfu.h:34:    uint32_t *req_data1;

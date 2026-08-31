@@ -1,0 +1,13 @@
+using sysbus
+
+mach create "mnv2_depthwise_phase9b"
+machine LoadPlatformDescription @renode/mnv2_depthwise.repl
+
+set cfu @verilator/build/libmnv2_depthwise_cfu.so
+cpu.cfu0 SimulationFilePathLinux $cfu
+
+set elf @sw/mnv2_depthwise.elf
+sysbus LoadELF $elf
+
+showAnalyzer uart
+start

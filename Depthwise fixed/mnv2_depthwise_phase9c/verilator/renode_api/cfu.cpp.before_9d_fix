@@ -1,0 +1,147 @@
+//
+// Copyright (c) 2025 Antmicro
+//
+
+#include "cfu.h"
+
+#include <cstdio>
+
+void Cfu::tick(bool countEnable, uint64_t steps)
+{
+    for(uint64_t i = 0; i < steps; i++)
+    {
+        *clk = 1;
+        evaluateModel();
+
+        *clk = 0;
+        evaluateModel();
+    }
+
+    if(countEnable)
+    {
+        tickCounter += steps;
+    }
+}
+
+void Cfu::timeoutTick(
+    uint8_t* signal,
+    uint8_t expectedValue,
+    int timeout)
+{
+    do
+    {
+        tick(true);
+        timeout--;
+    }
+    while((*signal != expectedValue) && timeout > 0);
+
+    if(timeout == 0)
+    {
+        throw "Operation timeout";
+    }
+}
+
+uint64_t Cfu::execute(
+    uint32_t functionID,
+    uint32_t data0,
+    uint32_t data1,
+    int* error)
+{
+    uint64_t result = 0;
+
+    fprintf(
+        stderr,
+        "[CFU] execute fn=%u data0=%08x data1=%08x\n",
+        functionID,
+        data0,
+        data1
+    );
+
+    fflush(stderr);
+
+    /*
+     * The native Renode API can provide the function ID
+     * in a wider representation. The HDL interface uses
+     * a 3-bit function ID.
+     */
+    uint32_t hdlFunctionID = functionID & 0x7;
+
+    *req_func_id = hdlFunctionID;
+    *req_data0 = data0;
+    *req_data1 = data1;
+
+    *req_valid = 1;
+    *resp_ready = 1;
+
+    *error = 0;
+
+    /*
+     * Apply request without advancing the clock.
+     */
+    evaluateModel();
+
+    /*
+     * Wait until the HDL accepts the command.
+     */
+    if(*req_ready != 1)
+    {
+        timeoutTick(req_ready, 1);
+    }
+
+    /*
+     * Check whether the response is immediate.
+     */
+    if(*resp_valid)
+    {
+        result = *resp_data;
+
+        fprintf(
+            stderr,
+            "[CFU] immediate response=%08x\n",
+            (uint32_t)result
+        );
+
+        fflush(stderr);
+
+        tick(true);
+    }
+    else
+    {
+        /*
+         * Otherwise wait for the HDL response.
+         */
+        timeoutTick(resp_valid, 1);
+
+        result = *resp_data;
+
+        fprintf(
+            stderr,
+            "[CFU] delayed response=%08x\n",
+            (uint32_t)result
+        );
+
+        fflush(stderr);
+    }
+
+    /*
+     * Command has completed.
+     */
+    *req_valid = 0;
+
+    evaluateModel();
+
+    tick(true);
+
+    return result;
+}
+
+void Cfu::reset()
+{
+    *rst = 1;
+
+    tick(true);
+
+    *rst = 0;
+
+    tick(true);
+}

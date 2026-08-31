@@ -1,0 +1,8 @@
+# Phase 8 Renode configuration placeholder.
+#
+# Phase 8A verifies the standalone RTL/CFU boundary.
+# Phase 8B will connect the RISC-V ELF/custom instruction path to
+# a Renode CPU model. Do not treat this file as a completed Renode
+# hardware model yet.
+
+echo "mnv2_depthwise Phase 8 Renode configuration"

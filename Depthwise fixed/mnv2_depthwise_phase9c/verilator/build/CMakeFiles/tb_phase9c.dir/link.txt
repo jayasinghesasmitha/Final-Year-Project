@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/tb_phase9c.dir/tb_phase9c.cpp.o -o tb_phase9c  verilated/Vmnv2_depthwise_cfu__ALL.a verilated/libverilated.a -ldl -latomic 

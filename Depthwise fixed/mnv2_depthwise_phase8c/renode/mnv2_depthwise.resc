@@ -1,0 +1,18 @@
+using sysbus
+
+mach create "mnv2_depthwise"
+machine LoadPlatformDescription @renode/mnv2_depthwise.repl
+
+# Install one handler per funct7 value for the custom-0 R-format instruction.
+# Pattern fields:
+# funct7 | rs2 | rs1 | funct3 | rd | opcode
+# 7 bits    5     5      3       5     7
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000000-----------------000----------0001011" @renode/cfu_handler_0.py
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000001-----------------000----------0001011" @renode/cfu_handler_1.py
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000010-----------------000----------0001011" @renode/cfu_handler_2.py
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000011-----------------000----------0001011" @renode/cfu_handler_3.py
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000100-----------------000----------0001011" @renode/cfu_handler_4.py
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000101-----------------000----------0001011" @renode/cfu_handler_5.py
+sysbus.cpu InstallCustomInstructionHandlerFromFile "0000110-----------------000----------0001011" @renode/cfu_handler_6.py
+
+echo "Phase 8C MNv2 custom-instruction handlers installed."

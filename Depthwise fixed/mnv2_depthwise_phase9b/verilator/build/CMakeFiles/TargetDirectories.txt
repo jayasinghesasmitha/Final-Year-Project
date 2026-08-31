@@ -1,0 +1,4 @@
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9b/verilator/build/CMakeFiles/verilate.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9b/verilator/build/CMakeFiles/mnv2_depthwise_cfu.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9b/verilator/build/CMakeFiles/edit_cache.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9b/verilator/build/CMakeFiles/rebuild_cache.dir

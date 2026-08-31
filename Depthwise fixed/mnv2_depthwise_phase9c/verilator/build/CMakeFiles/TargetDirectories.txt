@@ -1,0 +1,7 @@
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/verilate.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/mnv2_depthwise_cfu.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/tb_phase9c.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/tb_phase9d.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/tb_phase9e.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/edit_cache.dir
+/home/sasmitha-jayasinghe/Documents/github/depthwsie/mnv2_depthwise_phase9c/verilator/build/CMakeFiles/rebuild_cache.dir
