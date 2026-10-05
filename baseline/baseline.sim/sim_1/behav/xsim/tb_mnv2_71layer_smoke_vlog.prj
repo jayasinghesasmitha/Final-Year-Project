@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../../Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v" \
+"../../../../../../../../Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/tb/tb_mnv2_71layer_smoke.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

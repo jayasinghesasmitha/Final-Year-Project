@@ -1,0 +1,1 @@
+-wto "aefd344a7ecd47c5b9c2656d2f4597a4" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_mnv2_71layer_smoke_behav" "xil_defaultlib.tb_mnv2_71layer_smoke" "xil_defaultlib.glbl" -log "elaborate.log" 

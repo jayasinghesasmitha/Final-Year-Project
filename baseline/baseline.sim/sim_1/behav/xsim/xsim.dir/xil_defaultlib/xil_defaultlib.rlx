@@ -1,0 +1,10 @@
+0.6
+2018.1
+Apr  4 2018
+19:30:32
+C:/Users/ASUS/Documents/GitHub/mobilenetv2_nexys_a7_vivado/baseline/baseline.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,
+C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/generated/model_params.vh,1791194051,verilog,,,,,,,,,,,,
+C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/generated/op_quant_meta.vh,1791194050,verilog,,,,,,,,,,,,
+C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/generated/op_weight_meta.vh,1791194051,verilog,,,,,,,,,,,,
+C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v,1791195674,verilog,,C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/tb/tb_mnv2_71layer_smoke.v,C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/generated/model_params.vh;C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/generated/op_weight_meta.vh;C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/generated/op_quant_meta.vh,mnv2_71layer_ref,,,,,,,,
+C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/tb/tb_mnv2_71layer_smoke.v,1791194050,verilog,,,,tb_mnv2_71layer_smoke,,,,,,,,

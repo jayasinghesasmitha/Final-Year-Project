@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Oct  5 15:59:25 2026
+# Process ID: 10128
+# Current directory: C:/Users/ASUS/Documents/GitHub/mobilenetv2_nexys_a7_vivado/baseline/baseline.runs/synth_1
+# Command line: vivado.exe -log mnv2_demo_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mnv2_demo_top.tcl
+# Log file: C:/Users/ASUS/Documents/GitHub/mobilenetv2_nexys_a7_vivado/baseline/baseline.runs/synth_1/mnv2_demo_top.vds
+# Journal file: C:/Users/ASUS/Documents/GitHub/mobilenetv2_nexys_a7_vivado/baseline/baseline.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mnv2_demo_top.tcl -notrace
+Command: synth_design -top mnv2_demo_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18968 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 361.094 ; gain = 100.062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mnv2_demo_top' [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_demo_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mnv2_71layer_ref' [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:29]
+	Parameter ACT_BYTES bound to: 4146912 - type: integer 
+	Parameter CONST_BYTES bound to: 1694264 - type: integer 
+	Parameter DEBUG bound to: 0 - type: integer 
+	Parameter MNV2_OPS bound to: 71 - type: integer 
+	Parameter OP_QUANT bound to: 0 - type: integer 
+	Parameter OP_CONV bound to: 1 - type: integer 
+	Parameter OP_DW bound to: 2 - type: integer 
+	Parameter OP_ADD bound to: 3 - type: integer 
+	Parameter OP_PAD bound to: 4 - type: integer 
+	Parameter OP_MEAN bound to: 5 - type: integer 
+	Parameter OP_FC bound to: 6 - type: integer 
+	Parameter OP_SOFTMAX bound to: 7 - type: integer 
+	Parameter OP_DEQUANT bound to: 8 - type: integer 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter RUN bound to: 4'b0001 
+	Parameter ARG bound to: 4'b0010 
+	Parameter FIN bound to: 4'b0011 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/constants.hex'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:67]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/mult.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:68]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/shift.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:69]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/add_m0.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:70]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/add_m1.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:71]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/add_s0.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:72]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/add_s1.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:73]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/image.hex'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:74]
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:75]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../generated/buffer_base.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:76]
+ERROR: [Synth 8-403] loop limit (65536) exceeded [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:336]
+ERROR: [Synth 8-6156] failed synthesizing module 'mnv2_71layer_ref' [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_71layer_ref.v:29]
+ERROR: [Synth 8-6156] failed synthesizing module 'mnv2_demo_top' [C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/rtl/mnv2_demo_top.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1031.387 ; gain = 770.355
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 1 Warnings, 9 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  5 15:59:47 2026...

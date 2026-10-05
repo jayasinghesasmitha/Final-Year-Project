@@ -1,0 +1,204 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+==============================================
+IMAGE MEMORY CHECK
+==============================================
+act_mem[0] = ad
+act_mem[1] = b2
+act_mem[2] = 4c
+act_mem[3] = ad
+act_mem[4] = b2
+act_mem[5] = 4c
+==============================================
+==============================================
+IMAGE MEMORY CHECK
+act_mem[0] = ad
+act_mem[1] = b2
+act_mem[2] = 4c
+act_mem[3] = ad
+act_mem[4] = b2
+act_mem[5] = 4c
+==============================================
+MNV2 OP 0 complete, type=0, out_tensor=109, cycles=1
+MNV2 OP 1 complete, type=1, out_tensor=110, cycles=1
+MNV2 OP 2 complete, type=2, out_tensor=111, cycles=1
+MNV2 OP 3 complete, type=1, out_tensor=112, cycles=1
+MNV2 OP 4 complete, type=1, out_tensor=113, cycles=1
+MNV2 OP 5 complete, type=4, out_tensor=114, cycles=1
+MNV2 OP 6 complete, type=2, out_tensor=115, cycles=1
+MNV2 OP 7 complete, type=1, out_tensor=116, cycles=1
+MNV2 OP 8 complete, type=1, out_tensor=117, cycles=1
+MNV2 OP 9 complete, type=2, out_tensor=118, cycles=1
+MNV2 OP 10 complete, type=1, out_tensor=119, cycles=1
+MNV2 OP 11 complete, type=3, out_tensor=120, cycles=1
+MNV2 OP 12 complete, type=1, out_tensor=121, cycles=1
+MNV2 OP 13 complete, type=4, out_tensor=122, cycles=1
+MNV2 OP 14 complete, type=2, out_tensor=123, cycles=1
+MNV2 OP 15 complete, type=1, out_tensor=124, cycles=1
+MNV2 OP 16 complete, type=1, out_tensor=125, cycles=1
+MNV2 OP 17 complete, type=2, out_tensor=126, cycles=1
+MNV2 OP 18 complete, type=1, out_tensor=127, cycles=1
+MNV2 OP 19 complete, type=3, out_tensor=128, cycles=1
+MNV2 OP 20 complete, type=1, out_tensor=129, cycles=1
+MNV2 OP 21 complete, type=2, out_tensor=130, cycles=1
+MNV2 OP 22 complete, type=1, out_tensor=131, cycles=1
+MNV2 OP 23 complete, type=3, out_tensor=132, cycles=1
+MNV2 OP 24 complete, type=1, out_tensor=133, cycles=1
+MNV2 OP 25 complete, type=4, out_tensor=134, cycles=1
+MNV2 OP 26 complete, type=2, out_tensor=135, cycles=1
+MNV2 OP 27 complete, type=1, out_tensor=136, cycles=1
+MNV2 OP 28 complete, type=1, out_tensor=137, cycles=1
+MNV2 OP 29 complete, type=2, out_tensor=138, cycles=1
+MNV2 OP 30 complete, type=1, out_tensor=139, cycles=1
+MNV2 OP 31 complete, type=3, out_tensor=140, cycles=1
+MNV2 OP 32 complete, type=1, out_tensor=141, cycles=1
+MNV2 OP 33 complete, type=2, out_tensor=142, cycles=1
+MNV2 OP 34 complete, type=1, out_tensor=143, cycles=1
+MNV2 OP 35 complete, type=3, out_tensor=144, cycles=1
+MNV2 OP 36 complete, type=1, out_tensor=145, cycles=1
+MNV2 OP 37 complete, type=2, out_tensor=146, cycles=1
+MNV2 OP 38 complete, type=1, out_tensor=147, cycles=1
+MNV2 OP 39 complete, type=3, out_tensor=148, cycles=1
+MNV2 OP 40 complete, type=1, out_tensor=149, cycles=1
+MNV2 OP 41 complete, type=2, out_tensor=150, cycles=1
+MNV2 OP 42 complete, type=1, out_tensor=151, cycles=1
+MNV2 OP 43 complete, type=1, out_tensor=152, cycles=1
+MNV2 OP 44 complete, type=2, out_tensor=153, cycles=1
+MNV2 OP 45 complete, type=1, out_tensor=154, cycles=1
+MNV2 OP 46 complete, type=3, out_tensor=155, cycles=1
+MNV2 OP 47 complete, type=1, out_tensor=156, cycles=1
+MNV2 OP 48 complete, type=2, out_tensor=157, cycles=1
+MNV2 OP 49 complete, type=1, out_tensor=158, cycles=1
+MNV2 OP 50 complete, type=3, out_tensor=159, cycles=1
+MNV2 OP 51 complete, type=1, out_tensor=160, cycles=1
+MNV2 OP 52 complete, type=4, out_tensor=161, cycles=1
+MNV2 OP 53 complete, type=2, out_tensor=162, cycles=1
+MNV2 OP 54 complete, type=1, out_tensor=163, cycles=1
+MNV2 OP 55 complete, type=1, out_tensor=164, cycles=1
+MNV2 OP 56 complete, type=2, out_tensor=165, cycles=1
+MNV2 OP 57 complete, type=1, out_tensor=166, cycles=1
+MNV2 OP 58 complete, type=3, out_tensor=167, cycles=1
+MNV2 OP 59 complete, type=1, out_tensor=168, cycles=1
+MNV2 OP 60 complete, type=2, out_tensor=169, cycles=1
+MNV2 OP 61 complete, type=1, out_tensor=170, cycles=1
+MNV2 OP 62 complete, type=3, out_tensor=171, cycles=1
+MNV2 OP 63 complete, type=1, out_tensor=172, cycles=1
+MNV2 OP 64 complete, type=2, out_tensor=173, cycles=1
+MNV2 OP 65 complete, type=1, out_tensor=174, cycles=1
+MNV2 OP 66 complete, type=1, out_tensor=175, cycles=1
+MNV2 OP 67 complete, type=5, out_tensor=176, cycles=1, MEAN_OUT=1280
+MNV2 OP 68 complete, type=6, out_tensor=177, cycles=1, FC_IN=1280, FC_OUT=1000
+
+============================================================
+MobileNetV2 RTL PERFORMANCE REPORT
+============================================================
+Total operator cycles : 73
+Total MAC operations  : 58898272
+
+Operator timing:
+  OP 0 : start=5 end=5 cycles=1 type=0 out_tensor=109
+  OP 1 : start=6 end=6 cycles=1 type=1 out_tensor=110
+  OP 2 : start=7 end=7 cycles=1 type=2 out_tensor=111
+  OP 3 : start=8 end=8 cycles=1 type=1 out_tensor=112
+  OP 4 : start=9 end=9 cycles=1 type=1 out_tensor=113
+  OP 5 : start=10 end=10 cycles=1 type=4 out_tensor=114
+  OP 6 : start=11 end=11 cycles=1 type=2 out_tensor=115
+  OP 7 : start=12 end=12 cycles=1 type=1 out_tensor=116
+  OP 8 : start=13 end=13 cycles=1 type=1 out_tensor=117
+  OP 9 : start=14 end=14 cycles=1 type=2 out_tensor=118
+  OP 10 : start=15 end=15 cycles=1 type=1 out_tensor=119
+  OP 11 : start=16 end=16 cycles=1 type=3 out_tensor=120
+  OP 12 : start=17 end=17 cycles=1 type=1 out_tensor=121
+  OP 13 : start=18 end=18 cycles=1 type=4 out_tensor=122
+  OP 14 : start=19 end=19 cycles=1 type=2 out_tensor=123
+  OP 15 : start=20 end=20 cycles=1 type=1 out_tensor=124
+  OP 16 : start=21 end=21 cycles=1 type=1 out_tensor=125
+  OP 17 : start=22 end=22 cycles=1 type=2 out_tensor=126
+  OP 18 : start=23 end=23 cycles=1 type=1 out_tensor=127
+  OP 19 : start=24 end=24 cycles=1 type=3 out_tensor=128
+  OP 20 : start=25 end=25 cycles=1 type=1 out_tensor=129
+  OP 21 : start=26 end=26 cycles=1 type=2 out_tensor=130
+  OP 22 : start=27 end=27 cycles=1 type=1 out_tensor=131
+  OP 23 : start=28 end=28 cycles=1 type=3 out_tensor=132
+  OP 24 : start=29 end=29 cycles=1 type=1 out_tensor=133
+  OP 25 : start=30 end=30 cycles=1 type=4 out_tensor=134
+  OP 26 : start=31 end=31 cycles=1 type=2 out_tensor=135
+  OP 27 : start=32 end=32 cycles=1 type=1 out_tensor=136
+  OP 28 : start=33 end=33 cycles=1 type=1 out_tensor=137
+  OP 29 : start=34 end=34 cycles=1 type=2 out_tensor=138
+  OP 30 : start=35 end=35 cycles=1 type=1 out_tensor=139
+  OP 31 : start=36 end=36 cycles=1 type=3 out_tensor=140
+  OP 32 : start=37 end=37 cycles=1 type=1 out_tensor=141
+  OP 33 : start=38 end=38 cycles=1 type=2 out_tensor=142
+  OP 34 : start=39 end=39 cycles=1 type=1 out_tensor=143
+  OP 35 : start=40 end=40 cycles=1 type=3 out_tensor=144
+  OP 36 : start=41 end=41 cycles=1 type=1 out_tensor=145
+  OP 37 : start=42 end=42 cycles=1 type=2 out_tensor=146
+  OP 38 : start=43 end=43 cycles=1 type=1 out_tensor=147
+  OP 39 : start=44 end=44 cycles=1 type=3 out_tensor=148
+  OP 40 : start=45 end=45 cycles=1 type=1 out_tensor=149
+  OP 41 : start=46 end=46 cycles=1 type=2 out_tensor=150
+  OP 42 : start=47 end=47 cycles=1 type=1 out_tensor=151
+  OP 43 : start=48 end=48 cycles=1 type=1 out_tensor=152
+  OP 44 : start=49 end=49 cycles=1 type=2 out_tensor=153
+  OP 45 : start=50 end=50 cycles=1 type=1 out_tensor=154
+  OP 46 : start=51 end=51 cycles=1 type=3 out_tensor=155
+  OP 47 : start=52 end=52 cycles=1 type=1 out_tensor=156
+  OP 48 : start=53 end=53 cycles=1 type=2 out_tensor=157
+  OP 49 : start=54 end=54 cycles=1 type=1 out_tensor=158
+  OP 50 : start=55 end=55 cycles=1 type=3 out_tensor=159
+  OP 51 : start=56 end=56 cycles=1 type=1 out_tensor=160
+  OP 52 : start=57 end=57 cycles=1 type=4 out_tensor=161
+  OP 53 : start=58 end=58 cycles=1 type=2 out_tensor=162
+  OP 54 : start=59 end=59 cycles=1 type=1 out_tensor=163
+  OP 55 : start=60 end=60 cycles=1 type=1 out_tensor=164
+  OP 56 : start=61 end=61 cycles=1 type=2 out_tensor=165
+  OP 57 : start=62 end=62 cycles=1 type=1 out_tensor=166
+  OP 58 : start=63 end=63 cycles=1 type=3 out_tensor=167
+  OP 59 : start=64 end=64 cycles=1 type=1 out_tensor=168
+  OP 60 : start=65 end=65 cycles=1 type=2 out_tensor=169
+  OP 61 : start=66 end=66 cycles=1 type=1 out_tensor=170
+  OP 62 : start=67 end=67 cycles=1 type=3 out_tensor=171
+  OP 63 : start=68 end=68 cycles=1 type=1 out_tensor=172
+  OP 64 : start=69 end=69 cycles=1 type=2 out_tensor=173
+  OP 65 : start=70 end=70 cycles=1 type=1 out_tensor=174
+  OP 66 : start=71 end=71 cycles=1 type=1 out_tensor=175
+  OP 67 : start=72 end=72 cycles=1 type=5 out_tensor=176
+  OP 68 : start=73 end=73 cycles=1 type=6 out_tensor=177
+
+Operator counts:
+  CONV2D    : 35
+  DEPTHWISE : 17
+  ADD       : 10
+  PAD       : 4
+  MEAN      : 1
+  FC        : 1
+  QUANTIZE  : 1
+  SOFTMAX   : 0
+  DEQUANT   : 0
+============================================================
+
+FC[0] = -68
+FC[1] = -67
+FC[2] = -70
+FC[3] = -69
+FC[4] = -68
+FC[5] = -61
+FC[6] = -64
+FC[7] = -73
+FC[8] = -75
+FC[9] = -63
+
+============================================================
+FINAL END-TO-END TIMING
+============================================================
+Total RTL cycles including ARGMAX : 1074
+Total MAC operations              : 58898272
+Predicted class                   : 64
+============================================================
+
+==============================================
+MobileNetV2 71-op simulation completed
+Predicted ImageNet class index = 64
+==============================================
+$finish called at time : 10845 ns : File "C:/Users/ASUS/Downloads/mnv2_vivado_71layer_tflite_compatible_clean/mnv2_vivado_clean/tb/tb_mnv2_71layer_smoke.v" Line 55
